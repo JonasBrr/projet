@@ -1,0 +1,19 @@
+body{
+    background-image: url('/assets/fond.jpeg');
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-size: 100% 100%;
+}
+
+footer{
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+#presentation {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 75px;
+    font-size: large;
+}
