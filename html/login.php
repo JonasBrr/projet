@@ -15,7 +15,9 @@
                     $user = $query->fetch(PDO::FETCH_ASSOC);
                     if($user){
                         if($_POST['passwd'] === $user['passwd']){
+                            session_start();
                             $_SESSION['logon'] = true;
+                            header('Location: /lycee_list.php');
                         } else {
                             echo "Identifiant ou mot de passe erroné"; 
                         }
@@ -43,21 +45,6 @@
                         </div>
                     </fieldset>
                 </form>
-                <!-- <form class="pure-form pure-form-aligned" action="/login.php" method="post">
-                    <fieldset>
-                        <div class="pure-control-group">
-                            <label for="username">Nom d'utilisateur</label>
-                            <input type="text" name="username" placeholder="username" />
-                        </div>
-                        <div class="pure-control-group">
-                            <label for="password">Mot de passe</label>
-                            <input type="password" name="password" placeholder="password" />
-                        </div>
-                        <div class="pure-controls">
-                            <button type="submit" class="pure-button pure-button-primary">Connexion</button>
-                        </div>
-                    </fieldset>
-                </form> -->
                 <?php endif ?>
             </div>
         </div>
