@@ -5,6 +5,15 @@ create table etablissement(
     nom varchar(255), 
     adresse varchar(255),
     tel varchar(20),
+    ville varchar(255),
+    secteur varchar(255),
+    chef varchar(255),
+    chef_adj varchar(255),
+    ddfpt varchar(255),
+    ree varchar(255),
+    mail varchar(255),
+    site_web varchar(255),
+    nature varchar(255),
     primary key (id)
 )ENGINE=InnoDB;
 CREATE table formations(

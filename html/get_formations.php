@@ -48,7 +48,7 @@
                 <p>Mail : <a href="mailto:<?= $lycee["mail"]?>" target="blank"><?= $lycee["mail"]?></a><br></P>
                 <p>Site web : <a href="<?= $lycee["site_web"]?>"><?= $lycee["site_web"]?></a><br></p>
                 <p>Proviseur : <?= $lycee["chef"]?><br></p>
-                <p>Proviseur Adjoint : <?= $lycee["chef_adj"]?><br></p>
+                <p>Proviseur(s) Adjoint(s) : <?= $lycee["chef_adj"]?><br></p>
                 <p>DDF : <?= $lycee["ddfpt"]?><br></p>
                 <p>REE : <?= $lycee["ree"]?><br></p>
             </div>
