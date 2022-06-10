@@ -15,7 +15,7 @@ else if(isset($_SESSION['logon']) &&  $_SESSION['logon'] === true){
     $successl = $L->execute([
             "id" => $_GET["id"]
     ]);
-    $lycees = $L->fetchAll(PDO::FETCH_ASSOC);
+    $lycee = $L->fetch(PDO::FETCH_ASSOC);
     $F = $pdo->prepare('SELECT * FROM formations WHERE id_etablissement=:id');
     $successf = $F->execute([
         "id" => $_GET["id"]
@@ -39,11 +39,6 @@ else if(isset($_SESSION['logon']) &&  $_SESSION['logon'] === true){
             </div>
         </div>
     </nav>
-    <div style="width:auto;margin-left:3%; margin-top:2%; font-size:20px;">
-        <h2>Lycées<br></h2>
-        <ul>
-            <?php foreach ($lycees as $key => $lycee): ?>
-                <li><?= $lycee['nom'] ?></li>
-            <?php endforeach ?> 
-        </ul>
+    <div style="text-align: center; margin-top: 30px;">
+        <h1>Lycée <?= $lycee['nom'] ?> (<?= $lycee['ville'] ?>)</h1>
     </div>
